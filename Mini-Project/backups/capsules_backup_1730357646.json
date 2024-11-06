@@ -1,0 +1,14 @@
+[
+    {
+        "id": 54,
+        "user_id": 5,
+        "title": "Vacation",
+        "content_type": "text",
+        "content": "Thailand Trip",
+        "unlock_date": "2024-10-31 12:07:00",
+        "created_at": "2024-10-31 12:03:46",
+        "updated_at": "2024-10-31 12:04:35",
+        "access_type": "",
+        "shared_group_id": 5
+    }
+]

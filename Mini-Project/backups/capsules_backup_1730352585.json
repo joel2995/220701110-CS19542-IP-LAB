@@ -1,0 +1,86 @@
+[
+    {
+        "id": 42,
+        "user_id": 4,
+        "title": "Vacation",
+        "content_type": "text",
+        "content": "I am gonna go Dubai",
+        "unlock_date": "2024-10-31 08:12:00",
+        "created_at": "2024-10-31 08:09:47",
+        "updated_at": "2024-10-31 08:09:47",
+        "access_type": "group",
+        "shared_group_id": 2
+    },
+    {
+        "id": 43,
+        "user_id": 4,
+        "title": "Exhausted",
+        "content_type": "image",
+        "content": "Wallpaper.jpg",
+        "unlock_date": "2024-10-31 08:25:00",
+        "created_at": "2024-10-31 08:23:01",
+        "updated_at": "2024-10-31 08:23:01",
+        "access_type": "group",
+        "shared_group_id": 2
+    },
+    {
+        "id": 44,
+        "user_id": 4,
+        "title": "hiiiii",
+        "content_type": "text",
+        "content": "byeeeeee",
+        "unlock_date": "2024-10-31 08:35:00",
+        "created_at": "2024-10-31 08:34:01",
+        "updated_at": "2024-10-31 08:34:01",
+        "access_type": "private",
+        "shared_group_id": null
+    },
+    {
+        "id": 45,
+        "user_id": 4,
+        "title": "public",
+        "content_type": "text",
+        "content": "movie",
+        "unlock_date": "2024-10-31 08:37:00",
+        "created_at": "2024-10-31 08:36:01",
+        "updated_at": "2024-10-31 08:36:01",
+        "access_type": "public",
+        "shared_group_id": null
+    },
+    {
+        "id": 46,
+        "user_id": 4,
+        "title": "title",
+        "content_type": "text",
+        "content": "content",
+        "unlock_date": "2024-10-31 09:24:00",
+        "created_at": "2024-10-31 09:21:44",
+        "updated_at": "2024-10-31 09:21:44",
+        "access_type": "group",
+        "shared_group_id": 2
+    },
+    {
+        "id": 47,
+        "user_id": 4,
+        "title": "g1",
+        "content_type": "text",
+        "content": "j1",
+        "unlock_date": "2024-10-31 09:30:00",
+        "created_at": "2024-10-31 09:27:35",
+        "updated_at": "2024-10-31 09:27:35",
+        "access_type": "group",
+        "shared_group_id": 2
+    },
+    {
+        "id": 48,
+        "user_id": 4,
+        "title": "bb",
+        "content_type": "text",
+        "content": "nnmm",
+        "unlock_date": "2024-10-31 10:50:00",
+        "created_at": "2024-10-31 10:47:28",
+        "updated_at": "2024-10-31 10:47:38",
+        "access_type": "",
+        "shared_group_id": null
+    }
+]

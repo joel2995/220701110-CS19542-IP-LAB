@@ -1,0 +1,14 @@
+[
+    {
+        "id": 40,
+        "user_id": 2,
+        "title": "C1",
+        "content_type": "text",
+        "content": "H1",
+        "unlock_date": "2024-10-30 22:46:00",
+        "created_at": "2024-10-30 22:41:45",
+        "updated_at": "2024-10-30 22:41:45",
+        "access_type": "group",
+        "shared_group_id": 0
+    }
+]
