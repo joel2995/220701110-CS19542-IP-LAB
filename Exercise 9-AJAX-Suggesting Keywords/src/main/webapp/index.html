@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <title>Suggestion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Search Names:</h3>
+    <div id="container">
+        <div id="search-bar">
+            <input type="text" value="" name="i" id="type">
+        </div>
+        <div id="suggestions">
+        </div>
+    </div>
+    <script>
+        function c(text){
+            console.log(text);
+            var type=document.getElementById("type");
+            console.log(type.value);
+            type.value=text.innerHTML;
+            var suggestions=document.getElementById("suggestions");
+            suggestions.innerHTML="";
+        }
+        const xhttp = new XMLHttpRequest();
+        var a;
+            xhttp.onload = function() {
+                // console.log(document.getElementsByClassName("demo")[0].innerHTML,this.response);
+                if(this.status==200)
+                    a=this.response.split("\n");
+            }
+            xhttp.open("GET", "name.txt", true);
+            xhttp.send();
+        // document.getElementById
+        // var form=document.getElementById("type");
+        // var suggest=document.getElementById("suggest");
+        type.addEventListener("input",()=>{
+            type=document.getElementById("type").value;
+            suggestions.innerHTML="";
+            a.forEach((i)=>{
+                console.log(i.includes(type),type);
+                if(i.includes(type)&&type!=""){
+                    // i=i.trim().replace(" ","-");
+                    var div = document.createElement("div");
+                    div.innerHTML=i;
+                    div.setAttribute("onclick","c(this)");
+                    // div.classList.add(i);
+                    console.log(div);
+                    suggestions.appendChild(div);
+                }
+            });
+            // suggest.firstChild.selected=true;
+        });
+        // console.log(form);
+    </script>
+</body>
+</html> 

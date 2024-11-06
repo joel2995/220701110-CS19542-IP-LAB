@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    font-size: x-large;
+}
+.header,.footer{
+    background-image: linear-gradient(to right, black 10%, rgb(97, 30, 97) 50%, black 90%);
+    text-align: center;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.raja{
+    position: relative;
+    color: white;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06rem ;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0.85rem;
+    bottom: 0px;
+    height: max-content;
+}
+.ec{
+    position: relative;
+    color: white;
+    font-size: 1.03rem;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+    top: -0.5rem;
+    height: max-content;
+}
+.footer{
+    /* height: 100px; */
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+    margin-top: auto;
+}
+.address{
+    color: blue;
+    text-align: end;
+    position: relative;
+    right: 5px;
+    margin:20px 10px 20px 10px; 
+}
+.body{
+    display: flex;
+
+}
+.description{
+    /* display: inline-flexbox; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 119, 255);
+}
+.menu{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 20px;
+    height: 15rem;
+}
+li{
+    list-style-type: none;
+    height: 60px;
+    width: max-content;
+}
+a:link{
+    text-decoration: none;
+}
+.active,a:not(.cse):hover{
+    background-color: white;
+}
+.description>p{
+    margin: 0.4rem;
+}
+/* .header>div>div>p{
+    height: 10px;
+} */
+
+img{
+    height: 100px;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    margin-bottom: 1rem;
+    color: blue;
+    text-transform: uppercase;
+}
+h3{
+    color: black;
+    text-transform: uppercase;
+}
+table,tr,td,th{
+    color: black;
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+.cse{
+    color: black;
+    background-color: grey;
+}

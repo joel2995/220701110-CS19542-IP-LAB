@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Book Registration</h2>
+	<form action="RegisterBook" method="post">
+		<label for="bookname">Book Name:</label>
+		<input type="text" name="bookname">
+        <label for="authorname">Author Name:</label>
+        <input type="text" name="authorname">
+        <label for="price">Price:</label>
+        <input type="text" name="price">
+        <input type="submit" value="submit">
+	</form>
+	<form action="ShowBooks" method="post">
+		<input type="submit" value="Show Books">
+	</form>
+	<form action="SearchBooks" method="post">
+		<label>Search Book:</label>
+		<input type="text" name="bookname" >
+		<input type="submit" value="Search">
+	</form>
+</body>
+</html>

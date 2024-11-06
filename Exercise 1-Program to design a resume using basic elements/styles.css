@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.content {
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2em;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #555;
+  font-size: 1em;
+}
+
+.left, .right {
+  width: 48%;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.left {
+  border-right: 1px solid #ddd;
+}
+
+.right {
+  padding-left: 30px;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.1em;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #666;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+hr {
+  margin: 15px 0;
+  border: 0.5px solid #ccc;
+}
+
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about, .skills, .projects {
+  margin-bottom: 20px;
+}
+
+.skills ul, .projects ul {
+  margin-left: 15px;
+}
+
+.left ul, .right ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.right ul li::before {
+  content: "•";
+  color: #333;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.right h3, .right h2 {
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+.right p {
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.left p, .right p {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .left, .right {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      border-right: none;
+  }
+  .content {
+      flex-direction: column;
+  }
+}

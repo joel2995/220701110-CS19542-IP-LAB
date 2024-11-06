@@ -1,0 +1,179 @@
+body{
+  align-content: center;
+}
+.container-for-image {
+    position: relative;
+    /* text-align: center; */
+    color: white;
+    /* width: 100%; */
+    height: 200px; /* Set your desired static height */
+    overflow: hidden;
+  }
+  .image-container { 
+    width: 100%; /* Adjust this as needed for the container */
+    /* overflow: hidden; Optional, to hide overflow if the image is larger */
+  }
+  .responsive-image {
+    width: auto; /* Width will adjust automatically */
+  }
+  .top-left {
+    color: purple;
+    font-weight:500;
+    font-size: x-large;
+    position: absolute;
+    top: 0px;
+    /* left: 12px; */
+  }
+  .mousehover {
+    display: none;
+  }
+  .container-for-image:hover .mousehover {
+    display: block;
+    background-color: purple;
+    opacity: 70%;
+    position: absolute;
+    top: 0px;
+    /* left: 12px; */
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+  }
+  .container-for-image:hover .top-left{
+    display: none;
+  }
+  .hi{
+    display: none;
+  }
+  .hi:hover {
+    font-size: x-large;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a {
+    padding-left:30px ;
+    font-size: x-large;
+    white-space: nowrap;
+  }
+  .line{
+    width: 60%;
+	background: #fff;
+	height: 2px;
+	margin: 5px 0px;
+  }
+  .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+  }
+  .header{
+    height: 30%;
+  }
+  /* div.purple{
+    height: 10px;
+  } */
+  .nav-link{
+    color: white !important;
+    /* text-wrap: nowrap; */
+    text-transform: full-width;
+    white-space: nowrap;
+  }
+  .left-bottom{
+    border-bottom-left-radius: 70px;
+
+  }
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  .icon-bar{
+    width: 20px;
+    background: #fff;
+    height: 2px;
+    margin: 5px 0px;
+  }
+  .dark-purple{
+    background-color: rgb(105, 3, 105) !important; 
+  }
+  .purple{
+    background-color: purple !important;
+  }
+  .text-purple{
+    color: purple !important;
+  }
+  .text-white{
+    color:white !important;
+  }
+  .dropdown-item:hover {
+    color: purple !important;
+    background-color: white !important; /* Lighter purple shade on hover */
+  }
+  .navbar-nav,.navbar {
+    align-items: center;
+}
+.carousel-inner img {
+  height: 500px; /* Set the height of the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  width: 100%; /* Ensure images take full width */
+}
+.carousel-caption{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* left: 50%; */
+  /* width: 50%; */
+  background-color: purple ;
+  opacity: 70%;
+}
+@media (max-width: 767.98px) {
+      .carousel-caption {
+          left: 0px; /* Full width */
+      }
+  }
+
+  /* Half width on medium screens and up */
+  @media (min-width: 768px) {
+      .carousel-caption {
+          left: 50%; /* Half width */
+          /* left: 25%; Centering the half width caption */
+      }
+  }
+  iframe{
+    width:100%;
+    height: 100%;
+  }
+  .marquee{
+    justify-content: center;
+  }
+  marquee {
+    height: 360px;
+    line-height: 24px;
+    overflow: Hidden;
+  }
+  marquee li {
+    text-align: center;
+  }
+  .h4{
+    border-bottom: solid 2px rgba(254, 204, 0, .9);
+  }
+  .d-block{
+    text-align: center;
+  }
+  @media (max-width: 767.98px) {
+    .event-image img{
+        object-fit: cover;
+        width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+      .event-image img {
+          height: 50px ;
+          width: 50px;
+          object-fit: cover;
+          margin: 10px;
+      }
+  }

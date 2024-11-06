@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Jquery</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen"></div><br>
+    <script>
+        function generateBubble(){
+            let code=Math.floor(Math.random()*26)+65;
+            return String.fromCharCode(code);
+        }
+        $(document).keypress(function(event){
+            var div = $("<div></div>");
+            div.text(generateBubble());
+            var top=Math.floor(Math.random()*(window.innerHeight-50));
+            var left=Math.floor(Math.random()*(window.innerWidth-50));
+            var r=Math.floor(Math.random()*256);
+            var g=Math.floor(Math.random()*256);
+            var b=Math.floor(Math.random()*256);
+            div.css({
+                "position":"fixed",
+                "top":top,
+                "left":left,
+                "background-color":"rgb("+r+","+g+","+b+")"
+            });
+            $("div.screen").append(div);
+            $("div").html();
+        });
+    </script>
+</body>
+</html>

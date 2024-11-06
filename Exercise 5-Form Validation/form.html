@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function myfunction(){
+      window.alert("registration submitted");
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    
+    <form action="">
+      <h1>Registration Form</h1>
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+      </p>
+      <p>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </p>
+      <p>
+        <label for="age">Age</label>
+        <input type="number" min="18" id="age" required>
+      </p>
+      <p>
+        <label for="ph">Phone number</label>
+        <input type="number" max="9999999999" min="1000000000" id="ph" required>
+      </p>
+      <p>
+        <label for="year">Academic Year</label>
+        <select id="year" name="year" required>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        </select>
+      </p>
+      <p>
+        <label for="sem">Semester</label>
+        <input type="text" id="sem" required>
+      </p>
+      <p>
+        <label for="id">Course id</label>
+        <input type="text" id="id" required>
+      </p>
+      <p>
+        <label for="coursename">Course Name</label>
+        <input type="text" id="coursename" required>
+      </p>
+      <p>
+        <label for="credit">Credit</label>
+        <select id="credit" name="credit" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+      </p>
+      <p>
+        <button type="submit" onclick="myfunction()">submit</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Course Registration Form</h2>
+    <form id="registrationForm" action="Hello" method="post">
+        <label for="regno">Reg No: <div class="regno warn"></div></label><br>
+        <input type="text" id="regno" name="regno"><br><br> 
+
+        <label for="name">Student Name: <div class="name warn"></div></label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="year">Year: <div class="year warn"></div></label><br>
+         <select name="year" id="year" required>
+            <option value="" disabled selected>Select Year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2st Year</option>
+            <option value="3">3st Year</option>
+            <option value="4">4st Year</option>
+         </select>
+        
+        <label for="gender">Gender: <div class="gender warn"></div></label><br> 
+        <div class="radio-container">
+            <div>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br><br>
+            </div>
+        </div>
+        
+        <label for="semester">Semester: <div class="semester warn"></div></label><br>
+        <!-- <input type="text" id="semester" name="semester"><br><br> -->
+        <select name="semester" id="semester">
+            <option value="" disabled selected>Select Semester</option>
+            <option value="1">First Semester</option>
+            <option value="2">Second Semester</option>
+            <option value="3">Third Semester</option>
+            <option value="4">Fourth Semester</option>
+            <option value="5">Fifth Semester</option>
+            <option value="6">Sixth Semester</option>
+            <option value="7">Seventh Semester</option>
+            <option value="8">Eighth Semester</option>
+        </select>
+        
+        <label for="sub code">Subject Code: <div class="subcode warn"></div></label><br>
+        <input type="text" id="sub code" name="sub code"><br><br>
+        
+        <label for="sub name">Subect Name: <div class="subname warn"></div></label><br>
+        <input type="text" id="sub name" name="sub name"><br><br>
+                
+        <label for="credit">Credit: <div class="credit warn"></div></label><br>
+        <input type="text" id="credit" name="credit"><br><br>
+        
+        <label for="course type">Course Type: <div class="course warn"></div></label><br>
+        <select  id="course type" name="course type" required>
+            <option value="" disabled selected>Select Type</option>
+            <option value="core">Core</option>
+            <option value="pe">Professional Elective</option>
+            <option value="oe">Open Elective</option>
+        </select>
+        <br><br>
+        
+        <input type="button" value="validate" onclick="validateForm()">
+        
+        <div class="msg warn"></div>
+        <input type="reset" value="reset" onclick="validateForm()">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function nextPage(){
+            if(validateForm()){
+                document.querySelector("body").innerHTML="<div class='success'>submitted successfully</div>";
+            }
+        }
+        function validateForm() {
+            let b=true;
+            let regno = document.getElementById('regno').value;
+            let name = document.getElementById('name').value;
+            let gender = document.querySelector('input[name="gender"]:checked')?document.querySelector('input[name="gender"]:checked').value:document.querySelector('input[name="gender"]:checked');
+            let year = document.getElementById('year').value;
+            let semester = document.getElementById('semester').value;
+            let subname = document.getElementById('sub name').value;
+            let subcode = document.getElementById('sub code').value;
+            let credit = document.getElementById('credit').value;
+            let course_type = document.getElementById('course type').value;
+            
+            let regnoPattern = /^\d{9}$/;
+            let namePattern = /^[A-Za-z\s]+$/;
+            let yearPattern = /^[1-4]$/;
+            let semesterPattern = /^[1-8]$/;
+            let subcodePattern = /^[A-Z]{2,3}[0-9]{5}$/;
+            let creditPattern = /^[0-5]$/;
+            console.log(regnoPattern.test(regno));
+
+            if (!regnoPattern.test(regno)) {
+                document.getElementsByClassName('regno')[0].innerHTML="Please enter a valid register number (numbers only).";
+                document.getElementsByClassName('regno')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid register number (numbers only).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('regno')[0].innerHTML=regno;
+                document.getElementsByClassName('regno')[0].classList.add("accept");
+                // document.getElementById('regno').classList.add("hide");
+            }
+            if (!namePattern.test(name)) {
+                document.getElementsByClassName('name')[0].innerHTML="Please enter a valid name (letters and spaces only).";
+                document.getElementsByClassName('name')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid name (letters and spaces only).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('name')[0].innerHTML=name;
+                document.getElementsByClassName('name')[0].classList.add("accept");
+            }
+            if (!gender) {
+                document.getElementsByClassName('gender')[0].innerHTML="Please select a gender.";
+                document.getElementsByClassName('gender')[0].classList.remove("accept");
+                b=false;
+                // alert("Please select a gender.");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('gender')[0].innerHTML=gender;
+                document.getElementsByClassName('gender')[0].classList.add("accept");
+            }
+            if (!yearPattern.test(year)) {
+                document.getElementsByClassName('year')[0].innerHTML="Please select a valid year (1-4).";
+                document.getElementsByClassName('year')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid year (1-4).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('year')[0].innerHTML=year;
+                document.getElementsByClassName('year')[0].classList.add("accept");
+            }
+            if (!semesterPattern.test(semester)) {
+                document.getElementsByClassName('semester')[0].innerHTML="Please enter a valid semester (1-8).";
+                document.getElementsByClassName('semester')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid semester (1-8).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('semester')[0].innerHTML=semester;
+                document.getElementsByClassName('semester')[0].classList.add("accept");
+            }
+            if (!namePattern.test(subname)) {
+                document.getElementsByClassName('subname')[0].innerHTML="Please enter a valid name (letters and spaces only).";
+                document.getElementsByClassName('subname')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid name (letters and spaces only).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('subname')[0].innerHTML=subname;
+                document.getElementsByClassName('subname')[0].classList.add("accept");
+            }
+            if (!subcodePattern.test(subcode)) {
+                document.getElementsByClassName('subcode')[0].innerHTML="Please enter a valid subject code (xx[x]ddddd).";
+                document.getElementsByClassName('subcode')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid subject code (xx[x]ddddd).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('subcode')[0].innerHTML=subcode;
+                document.getElementsByClassName('subcode')[0].classList.add("accept");
+            }
+            if (!creditPattern.test(credit)) {
+                document.getElementsByClassName('credit')[0].innerHTML="Please enter a valid credit (0-5)";
+                document.getElementsByClassName('credit')[0].classList.remove("accept");
+                b=false;
+                // alert("Please enter a valid credit (0-5)")
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('credit')[0].innerHTML=credit;
+                document.getElementsByClassName('credit')[0].classList.add("accept");
+            }
+            if (!course_type){
+                document.getElementsByClassName('course')[0].innerHTML="Please select a course type (letters and spaces only).";
+                document.getElementsByClassName('course')[0].classList.remove("accept");
+                b=false;
+                // alert("Please select a course type (letters and spaces only).");
+                // return false;
+            }
+            else{
+                document.getElementsByClassName('course')[0].innerHTML=course_type;
+                document.getElementsByClassName('course')[0].classList.add("accept");
+            }
+            
+            if(b==true){
+            	document.getElementsByClassName('msg')[0].innerHTML="Validation successful<input type='submit' name='SUBMIT'>";
+            	document.getElementsByClassName('msg')[0].classList.add("accept");
+            }
+            else{
+            	document.getElementsByClassName('msg')[0].innerHTML="Validation Failed";
+            	document.getElementsByClassName('msg')[0].classList.remove("accept");
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Ajax</title>
+    <script>
+        function loadXMLDoc(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                console.log(document.getElementsByClassName("demo")[0].textContent.trim(),this.responseText.trim());
+                if(this.status==200)
+                    if(document.getElementsByClassName("demo")[0].textContent.trim()==this.responseText.trim())
+                        document.getElementsByClassName("demo")[0].innerHTML ="<h3>AJAX</h3>";
+                    else
+                        document.getElementsByClassName("demo")[0].innerHTML = "<h3>"+this.responseText+"</h3>";
+                else
+                document.getElementsByClassName("demo")[0].innerHTML ="Sorry This is Not your FAULT, OURS: File Not Found";
+            }
+            xhttp.open("GET", "rec.txt", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <div class="demo"><h3>AJAX</h3></div>
+    <button onclick="loadXMLDoc()">REC</button>
+</body>
+</html>
