@@ -1,0 +1,15 @@
+table,tr,td,th{
+    color: black;
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+}
+.container>div {
+    margin: 10px;
+}
